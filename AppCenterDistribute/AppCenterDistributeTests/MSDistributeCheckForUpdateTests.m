@@ -215,7 +215,7 @@ static NSString *const kMSTestAppSecret = @"IAMSECRET";
                                  OCMVerify([distributeMock checkLatestRelease:OCMOCK_ANY
                                                           distributionGroupId:OCMOCK_ANY
                                                                   releaseHash:OCMOCK_ANY]);
-                                 XCTAssertFalse(self.sut.updateFlowInProgress);
+                                 XCTAssertFalse([distributeMock updateFlowInProgress]);
                                  if (error) {
                                    XCTFail(@"Expectation Failed with error: %@", error);
                                  }
