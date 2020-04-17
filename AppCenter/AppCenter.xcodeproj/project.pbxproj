@@ -2645,7 +2645,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"${SRCROOT}/../Scripts\"\n./build-ohttpstubs.sh -iOS\n";
+			shellScript = "cd \"${SRCROOT}/../Scripts\"\n./build-ohttpstubs.sh iOS\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
