@@ -4,7 +4,7 @@
 # Licensed under the MIT License.
 set -e
 
-echo "Build OHTTPStubs $1"
+echo "Build OHTTPStubs build platform $1 build sdk $2 scheme name $3"
 
 maxXcodeVersion=1100
 swiftVersion="5.0"
@@ -19,12 +19,17 @@ then
     # workaround for the problem on xcode 10: https://stackoverflow.com/questions/52987843/carthage-fails-to-start-when-running-from-xcode-10-build-pre-action/53136006
     unset LLVM_TARGET_TRIPLE_SUFFIX
 
+    echo "Use Xcode 10"
+
     #xcode 10
-    swiftVersion="4.2"
-    sed -i '' -e 's/SWIFT_VERSION = 5.0/SWIFT_VERSION = 4.2/g' OHHTTPStubs.xcodeproj/project.pbxproj
+    swiftVersion="4.1"
+    sed -i '' -e 's/SWIFT_VERSION = 5.0/SWIFT_VERSION = 4.1/g' OHHTTPStubs.xcodeproj/project.pbxproj
 else 
     # xcode 11
-    sed -i '' -e 's/SWIFT_VERSION = 4.2/SWIFT_VERSION = 5.0/g' OHHTTPStubs.xcodeproj/project.pbxproj
+
+    echo "Use Xcode 11"
+
+    sed -i '' -e 's/SWIFT_VERSION = 4.1/SWIFT_VERSION = 5.0/g' OHHTTPStubs.xcodeproj/project.pbxproj
 fi
 
 # xcodebuild path
