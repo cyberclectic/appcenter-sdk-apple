@@ -2337,6 +2337,7 @@
 			buildConfigurationList = 6E2395801D22EF4F00E543C8 /* Build configuration list for PBXNativeTarget "AppCenter iOS Tests" */;
 			buildPhases = (
 				6E2395741D22EF4F00E543C8 /* Sources */,
+				DF0B63B92449B8DC00D3664B /* Build Test frameworks */,
 				6E2395751D22EF4F00E543C8 /* Frameworks */,
 				6E2395761D22EF4F00E543C8 /* Resources */,
 			);
@@ -2627,6 +2628,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Scripts/VerifyNoBuildSettings.swift\" ${PROJECT_NAME}.xcodeproj/project.pbxproj\n";
 			showEnvVarsInLog = 0;
+		};
+		DF0B63B92449B8DC00D3664B /* Build Test frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Test frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${SRCROOT}/../Scripts\"\n./build-ohttpstubs.sh -iOS\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
