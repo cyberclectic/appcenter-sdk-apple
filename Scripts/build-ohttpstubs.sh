@@ -23,14 +23,17 @@ then
 
     #xcode 10
     swiftVersion="4.1"
-    sed -i '' -e 's/SWIFT_VERSION = 5.0/SWIFT_VERSION = 4.1/g' OHHTTPStubs.xcodeproj/project.pbxproj
+    sed -i '' -e 's/SWIFT_VERSION = 5.0/SWIFT_VERSION = 4.2/g' OHHTTPStubs.xcodeproj/project.pbxproj
 else 
     # xcode 11
 
     echo "Use Xcode 11"
 
-    sed -i '' -e 's/SWIFT_VERSION = 4.1/SWIFT_VERSION = 5.0/g' OHHTTPStubs.xcodeproj/project.pbxproj
+    sed -i '' -e 's/SWIFT_VERSION = 4.2/SWIFT_VERSION = 5.0/g' OHHTTPStubs.xcodeproj/project.pbxproj
 fi
+
+rm -rf ../${buildPlatform}/OHHTTPStubs
+echo "Clean OHHTTP framework folder complete"
 
 # xcodebuild path
 xcodebuild \
