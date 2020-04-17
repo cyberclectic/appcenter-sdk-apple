@@ -2301,6 +2301,7 @@
 			buildConfigurationList = 0446DF281F3B864600C8E338 /* Build configuration list for PBXNativeTarget "AppCenter tvOS Tests" */;
 			buildPhases = (
 				0446DF011F3B864600C8E338 /* Sources */,
+				DF0B857B2449E75B00E63A5E /* ShellScript */,
 				0446DF1E1F3B864600C8E338 /* Frameworks */,
 				0446DF231F3B864600C8E338 /* Resources */,
 			);
@@ -2319,6 +2320,7 @@
 			buildConfigurationList = 046AEAF31ECA562A00CBE511 /* Build configuration list for PBXNativeTarget "AppCenter macOS Tests" */;
 			buildPhases = (
 				046AEAD21ECA562A00CBE511 /* Sources */,
+				DF0B857A2449E73900E63A5E /* ShellScript */,
 				046AEAED1ECA562A00CBE511 /* Frameworks */,
 				046AEAF21ECA562A00CBE511 /* Resources */,
 			);
@@ -2645,7 +2647,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"${SRCROOT}/../Scripts\"\n./build-ohttpstubs.sh iOS\n";
+			shellScript = "cd \"${SRCROOT}/../Scripts\"\n./build-ohttpstubs.sh iOS iphonesimulator iOS\n";
+		};
+		DF0B857A2449E73900E63A5E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${SRCROOT}/../Scripts\"\n./build-ohttpstubs.sh macOS macosx Mac\n";
+		};
+		DF0B857B2449E75B00E63A5E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${SRCROOT}/../Scripts\"\n./build-ohttpstubs.sh tvOS appletvsimulator tvOS\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
