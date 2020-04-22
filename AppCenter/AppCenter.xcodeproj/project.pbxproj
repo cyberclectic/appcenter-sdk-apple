@@ -2424,7 +2424,7 @@
 						ProvisioningStyle = Automatic;
 					};
 					C9A9201B230C07A50068070D = {
-						DevelopmentTeam = KYJ84ZC369;
+						DevelopmentTeam = 4PE9EU547H;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -3268,6 +3268,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 043120711EE0BCC4007054C5 /* tvOS.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 4PE9EU547H;
 			};
 			name = Debug;
 		};
@@ -3275,6 +3276,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 043120711EE0BCC4007054C5 /* tvOS.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				DEVELOPMENT_TEAM = 4PE9EU547H;
 			};
 			name = Release;
 		};
